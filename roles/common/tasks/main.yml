@@ -1,0 +1,25 @@
+- name: install packages
+  become: true
+  apt:
+    pkg={{ item }} state=latest
+    with_items:
+      - curl
+      - make
+      - sl
+      - tar
+      - vim
+      - wget
+      - zip
+      - curl
+      - gcc
+      - git
+      - less
+      - meld
+
+- include:
+    spotify.yml
+
+
+- name: Update all packages after install
+  apt:
+    update_cache: yes

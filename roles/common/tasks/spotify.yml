@@ -11,18 +11,20 @@
 # sudo apt-get install spotify-client
 
 
-- name: Add apt Keys 01-2017
+- name: Spotify add apt keys 01-2017
   become: true
   apt_key:
     keyserver: pool.sks-keyservers.net
     id: BBEBDCB318AD50EC6865090613B00F1FD2C19886
     state: present
 
--name: Add repository
- apt-repository:
-   repo: 'http://repository.spotify.com stable non-free'
+- name: Spotify add repository
+  become: true
+  apt_repository:
+    repo: 'deb http://repository.spotify.com stable non-free'
 
-- name: install
+- name: Spotify install
+  become: true
   apt:
     name: spotify-client
     update_cache: yes

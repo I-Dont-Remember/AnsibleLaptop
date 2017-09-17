@@ -1,0 +1,8 @@
+- name: Dotfiles clone repo
+  git:
+    repo: 'https://github.com/I-Dont-Remember/dotfiles.git'
+    clone: yes
+    dest: ~/dotfiles
+
+- name: Dotfiles run install script
+  command: bash ~/dotfiles/install_script.sh

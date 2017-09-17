@@ -20,7 +20,7 @@
     spotify.yml
 
 - include:
-    dotfiles.yaml
+    dotfiles.yml
 
 - name: Update all packages after install
   become: true

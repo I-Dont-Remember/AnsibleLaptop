@@ -1,0 +1,49 @@
+stacer
+dropbox/google drive/one drive
+spotify
+vim
+git
+rescuetime
+ngrok (executable)
+Docker
+lastpass
+virtual machine manager->virt-manager
+atom/sublime/brackets
+Themes for firefox/chrome
+
+
+***** Might already be on kubuntu ***
+okular
+gwenview
+virt-manager
+
+
+
+
+***** IDEAS ********
+instead of become true, run the whole thing as root
+
+
+
+*********** FILES ********************
+ssh config - http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
+ssh keys
+bashrc, profile, etc
+vimrc
+
+
+
+********** NOTES ***************
+https://serversforhackers.com/c/an-ansible2-tutorial
+
+https://www.digitalocean.com/community/tutorials/configuration-management-101-writing-ansible-playbooks
+
+http://docs.ansible.com/ansible/latest/playbooks_roles.html
+
+http://docs.ansible.com/ansible/latest/playbooks_error_handling.html
+
+Templates and copy modules are good for changing settings/config files 
+
+https://spin.atomicobject.com/2015/09/21/ansible-configuration-management-laptop/
+
+

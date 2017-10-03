@@ -9,8 +9,8 @@
   apt:
     upgrade_cache: yes
 
-- include: dotfiles.yml
+- import_tasks: dotfiles.yml
 
-- include: dropbox.yml
+- import_tasks: dropbox.yml
 
-#- include: docker.yml
+#- import_tasks: docker.yml

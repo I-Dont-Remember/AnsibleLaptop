@@ -4,7 +4,6 @@
   with_items:
       - curl
       - make
-      - sl
       - tar
       - vim
       - wget
@@ -13,14 +12,7 @@
       - gcc
       - git
       - less
-      - meld
-
-# If we put become:true here, do we not have to within the include?
-- include:
-    spotify.yml
-
-- include:
-    dotfiles.yml
+      - net-tools
 
 - name: Update all packages after install
   become: true

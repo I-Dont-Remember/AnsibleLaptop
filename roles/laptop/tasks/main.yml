@@ -1,0 +1,9 @@
+- name: Install laptop apt packages
+  apt: pkg={{ item }} state=latest
+  with_items:
+      - meld
+      - sl
+
+- name: Update all packages after install
+  apt:
+    upgrade_cache: yes

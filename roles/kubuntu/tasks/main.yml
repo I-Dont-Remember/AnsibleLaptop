@@ -1,3 +1,4 @@
+---
 - name: Install kubuntu-specific packages
   apt: pkg={{ item }} state=latest
   with_items:

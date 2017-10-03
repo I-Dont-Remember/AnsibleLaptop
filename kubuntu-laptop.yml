@@ -1,0 +1,8 @@
+- name: Kubuntu local setup
+  hosts: local
+  connection: local
+  become: true
+  roles:
+    - common
+    - kubuntu
+    - laptop

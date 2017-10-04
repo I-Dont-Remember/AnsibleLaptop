@@ -1,9 +1,9 @@
 ---
 - name: Dotfiles clone repo
   git:
-    repo: 'https://github.com/I-Dont-Remember/dotfiles.git'
+    repo: "{{ dotfiles_repo }}"
     clone: yes
-    dest: ~/dotfiles
+    dest: ~/{{ dotfiles_repo_name }}
 
 - name: Dotfiles run install script
-  command: bash ~/dotfiles/install_script.sh
+  command: bash ~/{{ dotfiles_repo_name }}/install_script.sh

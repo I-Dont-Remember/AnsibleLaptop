@@ -6,4 +6,4 @@
 
 - name: Update all packages after install
   apt:
-    upgrade_cache: yes
+    update_cache: yes

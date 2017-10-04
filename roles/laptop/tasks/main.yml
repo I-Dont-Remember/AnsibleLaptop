@@ -7,7 +7,7 @@
 
 - name: Update all packages after install
   apt:
-    upgrade_cache: yes
+    update_cache: yes
 
 - import_tasks: dotfiles.yml
   become: yes

@@ -14,3 +14,5 @@ https://github.com/iknite/ansible-spotify
  - Sept. 9, 2017: Basic configuration functional  
 	- Have fresh Kubuntu VM with a snapshot taken right after install (plus vim and git so I don't have to do that every time)
 
+
+- See laptop..main.yml (import dotfiles) to see how to run as user instead of root

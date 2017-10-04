@@ -12,7 +12,7 @@
 - import_tasks: dotfiles.yml
   become: yes
   become_method: sudo
-  become_user: {{ sudo_user }}
+  become_user: "{{ sudo_user }}"
 - import_tasks: dropbox.yml
 
 #- import_tasks: docker.yml

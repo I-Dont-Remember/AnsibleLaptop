@@ -4,6 +4,7 @@
   with_items:
       - meld
       - sl
+      - atom
 
 - name: Update all packages after install
   apt:

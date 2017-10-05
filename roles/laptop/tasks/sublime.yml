@@ -1,0 +1,16 @@
+---
+- name: Sublime install gpg key
+  apt_key:
+    url: https://download.sublimetext.com/sublimehq-pub.gpg
+
+# TODO: find module rather than command
+- name: Sublime select 'stable' channel
+  command: echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+
+- name: Update sources
+  apt:
+    update_cache: yes
+
+- name: Sublime install
+  apt:
+    name: sublime-text

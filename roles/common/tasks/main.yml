@@ -13,6 +13,7 @@
       - git
       - less
       - net-tools
+      - apt-transport-https
 
 - name: Update all packages after install
   become: true

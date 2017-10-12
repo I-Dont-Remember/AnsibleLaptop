@@ -3,6 +3,7 @@ dropbox/google drive/one drive
 spotify
 vim
 git
+yakuake
 rescuetime
 ngrok (executable)
 Docker
@@ -10,7 +11,7 @@ lastpass
 virtual machine manager->virt-manager
 atom/sublime/brackets
 Themes for firefox/chrome
-
+libre-office
 
 ***** Might already be on kubuntu ***
 okular
@@ -21,16 +22,28 @@ virt-manager
 
 
 ***** IDEAS ********
-instead of become true, run the whole thing as root
+- instead of become true, run the whole thing as root
 
+- Have plan for when to run apt-get update and apt-get upgrade
 
+- Most of our stuff is in dotfiles, docker, and web browsers.  Especially if we move
+to docker development.  Spend most time making sure all that is setup.
 
-*********** FILES ********************
+- convert docker to docker_install, then have a separate role for docker setup and stuff
+--use http://docs.ansible.com/ansible/latest/docker_module.html docker ansible module for 
+development setup
+
+- web browsers: can have opera, chrome, brave, and firefox for a variety.
+
+*********** Additions ********************
 ssh config - http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
 ssh keys
 bashrc, profile, etc
 vimrc
-
+- alteration of efibootmgr, use the thing where it halts and lets user deal with input
+pip, virtualenv, virtualenvwrapper
+VPN
+cron jobs
 
 
 ********** NOTES ***************
@@ -49,3 +62,10 @@ https://spin.atomicobject.com/2015/09/21/ansible-configuration-management-laptop
 https://michaelheap.com/ansible-installing-google-chrome/
 
 
+#######################################################################################################
+#
+# Section for settings Ansible can't/ we don't know how to do
+#
+#######################################################################################################
+Kubuntu:
+ - Hot corners are useful

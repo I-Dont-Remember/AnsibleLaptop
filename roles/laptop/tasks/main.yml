@@ -5,6 +5,10 @@
       - meld
       - sl
       - atom
+      - okular
+      - gwenview
+      - stacer
+      - libreoffice
 
 - name: Update all packages after install
   apt:
@@ -26,3 +30,8 @@
 - import_tasks: firefox.yml
 
 - import_tasks: sublime.yml
+
+#- name: Acquire Ngrok
+#  command: wget ngrok, place in /usr/local/bin or wherever else we put our scripts
+
+

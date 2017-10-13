@@ -2,7 +2,6 @@
   become: true
   apt: pkg={{ item }} state=latest
   with_items:
-      - curl
       - make
       - tar
       - vim
@@ -14,6 +13,14 @@
       - less
       - net-tools
       - apt-transport-https
+      - build-essential
+      - gparted
+      - rar
+      - unrar
+      - p7zip
+      - p7zip-full
+      - gdebi
+      - ufw
 
 - name: Update all packages after install
   become: true

@@ -14,6 +14,15 @@
   become: yes
   become_method: sudo
   become_user: "{{ sudo_user }}"
+
 - import_tasks: dropbox.yml
 
-#- import_tasks: docker.yml
+- import_tasks: docker.yml
+
+- import_tasks: brave.yml
+
+- import_tasks: chrome.yml
+
+- import_tasks: firefox.yml
+
+- import_tasks: sublime.yml

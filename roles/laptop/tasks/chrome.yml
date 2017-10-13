@@ -1,0 +1,11 @@
+---
+- name: Chrome apt file
+
+- name: Chrome add key
+
+- name: Chrome add repo
+
+- name: Update apt
+
+- name: Chrome install
+   apt:

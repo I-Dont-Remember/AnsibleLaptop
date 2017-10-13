@@ -1,0 +1,9 @@
+---
+
+- name: Virt-manager install
+  apt:
+    pkg: virt-manager
+    state: present
+
+# Setup VMs and whatnot here
+

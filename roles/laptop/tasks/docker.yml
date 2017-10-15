@@ -22,5 +22,12 @@
     update_cache: yes
 
 - name: Docker install
+  apt:
+   name: docker-ce
+   state: present
 
-- name: add user to docker group
+- name: Docker add user to docker group
+  user:
+    name: '{{ user }}'
+    groups: docker
+    append: yes

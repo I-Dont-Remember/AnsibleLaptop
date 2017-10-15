@@ -35,3 +35,7 @@
 #  command: wget ngrok, place in /usr/local/bin or wherever else we put our scripts
 
 - import_tasks: virt-manager.yml
+
+- import_tasks: spotify.yml
+
+

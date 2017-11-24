@@ -38,4 +38,4 @@
 
 - import_tasks: spotify.yml
 
-
+- import_tasks: etcher.yml

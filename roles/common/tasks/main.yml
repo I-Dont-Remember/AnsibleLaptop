@@ -21,6 +21,10 @@
       - p7zip-full
       - gdebi
       - ufw
+      - nmap
+      - ncdu
+      - figlet
+      - sl
 
 - name: Update all packages after install
   become: true

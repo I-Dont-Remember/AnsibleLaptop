@@ -9,37 +9,39 @@
       - gwenview
       - stacer
       - libreoffice
+      - nfs-common
+      - rdesktop
 
 - name: Update all packages after install
   apt:
     update_cache: yes
 
-- import_tasks: dotfiles.yml
+- include: dotfiles.yml
   become: yes
   become_method: sudo
   become_user: "{{ user_name }}"
 
-- import_tasks: dropbox.yml
+- include: dropbox.yml
 
-- import_tasks: docker.yml
+- include: docker.yml
 
-- import_tasks: brave.yml
+- include: brave.yml
 
-- import_tasks: chrome.yml
+- include: chrome.yml
 
-- import_tasks: firefox.yml
+- include: firefox.yml
 
-- import_tasks: sublime.yml
+- include: sublime.yml
 
 #- name: Acquire Ngrok
 #  command: wget ngrok, place in /usr/local/bin or wherever else we put our scripts
 
-- import_tasks: virt-manager.yml
+- include: virt-manager.yml
 
-- import_tasks: spotify.yml
+- include: spotify.yml
 
-- import_tasks: etcher.yml
+- include: etcher.yml
 
-- import_tasks: git-kraken.yml
+- include: git-kraken.yml
 
-- import_tasks: virtual-box.yml
+- include: virtual-box.yml

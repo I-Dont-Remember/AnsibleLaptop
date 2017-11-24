@@ -12,6 +12,22 @@ virtual machine manager->virt-manager
 atom/sublime/brackets
 Themes for firefox/chrome
 libre-office
+virtualbox
+
+bleachbit
+synaptic
+crashplan
+genymotion --andriod emulator
+bittorrent or other torrent clients
+WINE
+pidgin
+alternative to skype
+recordmydesktop
+nmap
+
+ncdu
+
+login to all services we install
 
 ***** Might already be on kubuntu ***
 okular
@@ -44,6 +60,7 @@ vimrc
 pip, virtualenv, virtualenvwrapper
 VPN
 cron jobs
+set docker install location in home rather than filling root, should do with a lot of software
 
 
 ********** NOTES ***************
@@ -69,3 +86,29 @@ https://michaelheap.com/ansible-installing-google-chrome/
 #######################################################################################################
 Kubuntu:
  - Hot corners are useful
+
+
+
+### NFS setup ###
+https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-16-04
+nfs-kernel-server installed on host
+nfs-common installed on client
+
+
+ - setup exports in host /etc/exports and restart server
+ - * nfs needs uid/gid to match for it to allow usage as non-sudo, 
+     current workaround is /etc/nfs.map file:
+# remote local
+gid 1001 1000 # theuser kquinn
+uid 1001 1000
+ - Allows usage as oddly 'theuser uid 1000' whereas 'kevin uid 1001' was the goal.
+     yes, tried flipping and it didn't work.
+     This setup allows me permissions in any directories/files created by kevin user, 
+     so somehow permissions on machine must allow theuser to access kevin stuff.
+     No bueno but I don't care right now.
+  - fstab is working now? i guess
+
+
+really should check for distro, then we can have it package manager/distro agnostic.
+   Then if we want to try CentOS or an Arch based distro or whatever in the future we set.
+

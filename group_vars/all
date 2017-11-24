@@ -2,6 +2,6 @@
 # Variables here apply to all host groups
 # Use {{ <variable> }} cuz Jinja, or quote it if it starts a line
 
-sudo_user: kevin
+user_name: kevin
 dotfiles_repo: https://github.com/I-Dont-Remember/dotfiles.git
 dotfiles_repo_name: dotfiles

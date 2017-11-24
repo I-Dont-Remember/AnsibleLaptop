@@ -1,0 +1,9 @@
+---
+- name: GitKraken download
+  get_url:
+    url: https://release.gitkraken.com/linux/gitkraken-amd64.deb
+    dest: /home/{{ user_name }}/gitkraken-amd64.deb
+
+- name: GitKraken install
+  apt:
+    deb: /home/{{ user_name }}/gitkraken-amd64.deb

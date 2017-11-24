@@ -17,7 +17,7 @@
 - import_tasks: dotfiles.yml
   become: yes
   become_method: sudo
-  become_user: "{{ sudo_user }}"
+  become_user: "{{ user_name }}"
 
 - import_tasks: dropbox.yml
 
@@ -39,3 +39,6 @@
 - import_tasks: spotify.yml
 
 - import_tasks: etcher.yml
+
+- import_tasks: git-kraken.yml
+

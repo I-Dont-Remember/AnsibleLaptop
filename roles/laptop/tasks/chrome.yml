@@ -7,10 +7,10 @@
 - name: Chrome add repo
   apt_repository:
     repo: deb http://dl.google.com/linux/chrome/deb/ stable main
-    file: /etc/apt/sources.list.d/google-chrome.list
+    filename: /etc/apt/sources.list.d/google-chrome.list
     state: present
     update_cache: yes
 
 - name: Chrome install
   apt:
-    pkg: google-chrome-stable
+    name: google-chrome-stable

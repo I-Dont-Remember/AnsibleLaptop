@@ -6,7 +6,7 @@
       - sl
       - okular
       - gwenview
-      - stacer
+#      - stacer
       - libreoffice
       - nfs-common
       - rdesktop

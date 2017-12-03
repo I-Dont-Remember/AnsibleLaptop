@@ -1,0 +1,9 @@
+---
+- name: Install laptop apt packages
+  apt: pkg={{ item }} state=latest update_cache=yes
+  with_items:
+      - nfs-kernel-server
+
+- include: nfs.yml
+
+- include: users.yml

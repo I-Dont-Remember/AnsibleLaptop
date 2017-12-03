@@ -1,0 +1,7 @@
+- name: Home Server
+  hosts: local
+  connection: local
+  become: yes
+  roles:
+    - common
+    - homeserver

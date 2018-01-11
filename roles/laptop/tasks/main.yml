@@ -10,6 +10,7 @@
       - libreoffice
       - nfs-common
       - rdesktop
+      - fdupes
 
 - name: Update all packages after install
   apt:

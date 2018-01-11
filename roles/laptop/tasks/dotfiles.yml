@@ -5,5 +5,8 @@
     clone: yes
     dest: ~/{{ dotfiles_repo_name }}
 
+- name: Dotfiles fetch submodules
+  command: 'git submodule init && git submodule update'
+
 - name: Dotfiles run install script
   command: bash ~/{{ dotfiles_repo_name }}/install_script.sh

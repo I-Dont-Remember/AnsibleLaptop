@@ -22,6 +22,8 @@ Setup that can't/hasn't yet made it into Ansible
   - Lastpass
   - Spotify
 
+- Dropbox Symlinking folders
+
 - Desktop Look & Feel
   - Hot corners
   - Desktop panel applications and switch to side of screen

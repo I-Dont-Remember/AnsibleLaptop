@@ -25,6 +25,10 @@
       - ncdu
       - figlet
       - sl
+      - elinks
+      - nasm
+      - cowsay
+
 
 - name: Update all packages after install
   become: true

@@ -21,13 +21,18 @@ reinvigorate this section with automation.
 A "script" I can run on my life if I ever lose my phone again.  Give myself concrete steps to follow
 and give myself the best chance at retrieval and damage minimization.  
 
-##### Useful Examples
+#### Useful Examples
 - https://odolbeau.fr/blog/how-to-install-your-laptop-with-ansible.html  
 - https://github.com/Benoth/ansible-ubuntu  
 - https://blog.josephkahn.io/articles/ansible/  
 - https://spin.atomicobject.com/2015/09/21/ansible-configuration-management-laptop/  
 - https://github.com/ksylvan/AnsibleLaptop  
 - https://github.com/iknite/ansible-spotify  
+
+#### Testing
+The Dockerfile is laid out to build a fresh image ready for testing.  Build it and run `docker run image-name make install`
+to apply the Ansible playbook.  In the future it is probably worth switching over to [provision_docker](https://github.com/chrismeyersfsu/provision_docker).
+Other testing strategies are being researched as well and will be added in the coming months.
 
 ###### Notes
 - See main.yml under `laptop` role for reference to run as the user instead of as root  

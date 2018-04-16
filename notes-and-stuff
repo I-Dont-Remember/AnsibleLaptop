@@ -112,3 +112,19 @@ uid 1001 1000
 really should check for distro, then we can have it package manager/distro agnostic.
    Then if we want to try CentOS or an Arch based distro or whatever in the future we set.
 
+
+noti binary from github
+espeak
+
+snap packages
+https://stackoverflow.com/questions/47305658/install-snap-packages-with-ansible
+
+nodejs development stuff
+nodejs itself
+yarn
+watchman https://askubuntu.com/questions/964364/error-installing-watchman-on-ubuntu-16-04
+https://www.moveoapps.com/blog/how-to-install-react-native-on-ubuntu-17-10/
+nvm?
+global package installations?
+https://stackoverflow.com/questions/31041366/how-to-install-ionic-framework-on-ubuntu#31041813
+had to add "org.gradle.daemon=true" in ~/.gradle/gradle.properties to allow react native to use gradle

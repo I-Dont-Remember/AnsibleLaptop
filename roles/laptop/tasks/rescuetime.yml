@@ -1,0 +1,36 @@
+---
+# This needs to be reworked to be less fragile
+- name: Rescuetime get deb file
+  get_url:
+      url: https://www.rescuetime.com/setup/installer?os=amd64deb
+    dest: /home/{{ user_name }}/rescuetime.deb
+
+- name: Rescuetime install
+  apt:
+    deb: /home/{{ user_name }}/rescuetime.deb
+
+# Run /usr/bin/rescuetime, input account info, and add rescuetime to boot autostart
+
+# kde autostart scans $HOME/.config/autostart for programs, looked and it holds .desktop files for all that we've added
+/home/kevin/.config/autostart
+
+# rescuetime.desktop file in above path:
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=rescuetime
+GenericName[en_US]=
+GenericName=
+Icon=system-run
+MimeType=
+Name[en_US]=
+Name=
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

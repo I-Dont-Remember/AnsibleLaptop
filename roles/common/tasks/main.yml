@@ -28,7 +28,7 @@
       - elinks
       - nasm
       - cowsay
-
+      - httpie
 
 - name: Update all packages after install
   become: true

@@ -1,0 +1,8 @@
+- include_role:
+    name: firefox
+
+- include_role:
+    name: brave
+
+- include_role:
+    name: chrome

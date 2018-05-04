@@ -1,0 +1,19 @@
+---
+- name: Brave acquire apt key
+  apt_key:
+    url: https://s3-us-west-2.amazonaws.com/brave-apt/keys.asc
+    state: present
+
+- name: Brave add repo
+  apt_repository:
+    repo: deb [arch=amd64] https://s3-us-west-2.amazonaws.com/brave-apt {{ ansible_lsb.codename }}  main
+    filename: '/etc/apt/sources.list.d/brave-{{ ansible_lsb.codename }}.list'
+    state: present
+    update_cache: yes
+
+- name: Brave installation
+  apt:
+    name: brave
+    state: present
+
+#echo "deb [arch=amd64] https://s3-us-west-2.amazonaws.com/brave-apt `lsb_release -sc` main" | sudo tee -a /etc/apt/sources.list.d/brave-`lsb_release -sc`.list

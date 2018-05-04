@@ -1,14 +1,14 @@
 .PHONY: test
 
 install:
-	ansible-playbook ubuntu-dev-machine.yml --ask-become-pass
+	ansible-playbook ubuntu-dev.playbook.yml --ask-become-pass
 
 
 dry-run:
-	ansible-playbook ubuntu-dev-machine.yml --ask-become-pass --check
+	ansible-playbook ubuntu-dev.playbook.yml --ask-become-pass --check
 
 syntax-check:
-	ansible-playbook ubuntu-dev-machine.yml --syntax-check
+	ansible-playbook ubuntu-dev.playbook.yml --syntax-check
 
 # TODO: Change to make install or dry-run once the repo is not in revamp mode,
 # also need to install anything in requirements file before testing

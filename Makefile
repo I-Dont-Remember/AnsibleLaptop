@@ -1,11 +1,11 @@
 
 
 install:
-	ansible-playbook -i hosts  kubuntu-laptop.yml --ask-become-pass
+	ansible-playbook ubuntu-dev-machine.yml --ask-become-pass
 
 
 dry-run:
-	ansible-playbook -i hosts kubuntu-laptop.yml --ask-become-pass --check
+	ansible-playbook ubuntu-dev-machine.yml --ask-become-pass --check
 
 syntax-check:
-	ansible-playbook kubuntu-laptop.yml --syntax-check
+	ansible-playbook ubuntu-dev-machine.yml --syntax-check

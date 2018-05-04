@@ -1,5 +1,7 @@
 #! /bin/bash
 
+download_dir="downloaded-roles"
+
 # From https://github.com/Benoth/ansible-ubuntu/blob/master/install.sh
 ###################
 # Install ansible #
@@ -15,3 +17,11 @@ if ! hash ansible >/dev/null 2>&1; then
 else
     echo "Ansible already installed"
 fi
+
+# Check roles download directory exists
+if [ ! -d $download_dir ]; then
+    mkdir $download_dir
+fi
+
+# Install roles to directory specified in `ansible.cfg`
+ansible-galaxy -r requirements.yml

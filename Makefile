@@ -1,4 +1,4 @@
-
+.PHONY: test
 
 install:
 	ansible-playbook ubuntu-dev-machine.yml --ask-become-pass
@@ -9,3 +9,9 @@ dry-run:
 
 syntax-check:
 	ansible-playbook ubuntu-dev-machine.yml --syntax-check
+
+# TODO: Change to make install or dry-run once the repo is not in revamp mode,
+# also need to install anything in requirements file before testing
+test:
+	docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} \
+		ansible-test make syntax-check

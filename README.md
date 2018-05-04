@@ -1,14 +1,12 @@
 # AnsibleLaptop
-Use ansible to create an easy laptop configuration
+Use Ansible to put our machine setup and preferences into version control, making life easier if my laptop spontaneously combusts.
 
-## Security Mention
-Yes, having my laptop configuration online does provide someone with malicious intent about my device.
-That said, the convenience of a human readable record of the software I want to have and how to acquire it
-far outweighs the risks that might stem from this knowledge being public.  
-
+## Layout
+`roles/` holds a single level of all roles and `group-roles/` helps to gather similar ones together, such as `browsers`.  
+This ideally helps our playbooks to be easily-readable and we can change the inner workings of either `roles` or `group-roles` without affecting the playbooks.
 
 ## Usage
-- On a fresh installation of Kubuntu, install git and your editor of choice and clone this repo
+- On a fresh installation of Ubuntu (also probably functional on any distro using `apt`), install git and your editor of choice and clone this repo
 - After cloning, running the provided Makefile options will allow you to either fully run the 
 playbook or dry-run or check the playbook syntax
 - That's it!
@@ -33,6 +31,7 @@ and give myself the best chance at retrieval and damage minimization.
 The Dockerfile is laid out to build a fresh image ready for testing.  Build it and run `docker run image-name make install`
 to apply the Ansible playbook.  In the future it is probably worth switching over to [provision_docker](https://github.com/chrismeyersfsu/provision_docker).
 Other testing strategies are being researched as well and will be added in the coming months.
+There is also a `make test` available if the image is named `ansible-test`
 
 ###### Notes
-- See main.yml under `laptop` role for reference to run as the user instead of as root  
+- See `dotfiles` role for reference to run as the user instead of as root  

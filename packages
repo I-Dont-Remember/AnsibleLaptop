@@ -136,3 +136,17 @@
 ​  - ubuntustudio-desktop
 ​  - whoopsie
 ​ - xubuntu-desktop
++- yakuake
++- kdeconnect
++- krdc
++- setup Postman
++
++https://github.com/spotify/docker-gc
++https://semaphoreci.com/community/tutorials/testing-ansible-roles-on-multiple-operating-systems-with-docker-and-semaphore
++
++https://docs.ansible.com/ansible/2.4/playbooks_reuse_roles.html#using-roles
++  - Use import role to still keep things structured like dev-tools/vscode dev-tools/spotify while keeping them as roles instead
++    of tasks we have to write and not be able to maintain
++
++- Don't forget to check the Trello Projects page for any information on this we may have stuffed there
+

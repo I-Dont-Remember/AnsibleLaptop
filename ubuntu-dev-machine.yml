@@ -1,8 +1,6 @@
-- name: Kubuntu local setup
-  hosts: local
+- name: Ubuntu local setup
+  hosts: all
   connection: local
   become: yes
   roles:
-    - common
-    - kubuntu
-    - laptop
+    - group-roles/browsers

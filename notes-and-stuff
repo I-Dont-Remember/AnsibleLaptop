@@ -128,3 +128,18 @@ nvm?
 global package installations?
 https://stackoverflow.com/questions/31041366/how-to-install-ionic-framework-on-ubuntu#31041813
 had to add "org.gradle.daemon=true" in ~/.gradle/gradle.properties to allow react native to use gradle
+
+
+fslint and fdupes for helping to keep the system clean,
+have setup reminder to help us regularly clean system? automatically ask to delete stuff that hasn't been touched in 3 months?
+
+
+Configuration for Bing Rewards
+https://github.com/spatel4140/bing-rewards
+https://github.com/kathawala/RewardsBot
+https://github.com/sealemar/BingRewards
+-- find the best setup that works well
+
+setup ssh keys for our pis and other computers
+
+mail client: mailspring?

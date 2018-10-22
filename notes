@@ -1,0 +1,61 @@
+http://sourabhbajaj.com/mac-setup/Security/
+https://wilsonmar.github.io/ansible-mac-osx-setup/#homebrew
+auto update vscode https://askubuntu.com/questions/833448/how-to-update-vs-code-on-ubuntu
+- Is it worth having a single top-level config file of variables? would it help us
+keep things more up to date?
+
+
+
+
+***** IDEAS ********
+- instead of become true, run the whole thing as root
+
+- Have plan for when to run apt-get update and apt-get upgrade
+
+- Most of our stuff is in dotfiles, docker, and web browsers.  Especially if we move
+to docker development.  Spend most time making sure all that is setup.
+
+- convert docker to docker_install, then have a separate role for docker setup and stuff
+--use http://docs.ansible.com/ansible/latest/docker_module.html docker ansible module for 
+development setup
+set docker install location in home rather than filling root, should do with a lot of software
+
+really should check for distro, then we can have it package manager/distro agnostic.
+Then if we want to try CentOS or an Arch based distro or whatever in the future we set.
+
+********** NOTES ***************
+https://serversforhackers.com/c/an-ansible2-tutorial
+
+https://www.digitalocean.com/community/tutorials/configuration-management-101-writing-ansible-playbooks
+
+http://docs.ansible.com/ansible/latest/playbooks_roles.html
+
+http://docs.ansible.com/ansible/latest/playbooks_error_handling.html
+
+Templates and copy modules are good for changing settings/config files 
+
+https://spin.atomicobject.com/2015/09/21/ansible-configuration-management-laptop/
+
+https://michaelheap.com/ansible-installing-google-chrome/
+
+
+snap packages
+https://stackoverflow.com/questions/47305658/install-snap-packages-with-ansible
+
+watchman https://askubuntu.com/questions/964364/error-installing-watchman-on-ubuntu-16-04
+https://www.moveoapps.com/blog/how-to-install-react-native-on-ubuntu-17-10/
+nvm?
+global package installations?
+had to add "org.gradle.daemon=true" in ~/.gradle/gradle.properties to allow react native to use gradle
+
+
+
+
+
+playbooks should be the main configuration details, not roles like we currently have
+- Want to be able to run against any debian/ubuntu derivative, so need to write it in a way that is conducive
+- Should be able to choose to run against desktop or laptop with no issue
+- Should be able to setup raspberry pi or home server with everything we need
+- roles can be passed values (like commands), could be useful
+- handlers are used when other tasks report changes, such as restarting services
+

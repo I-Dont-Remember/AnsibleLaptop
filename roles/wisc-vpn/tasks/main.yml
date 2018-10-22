@@ -1,0 +1,9 @@
+---
+# TODO: Setup for using VPN
+- name: Install Apt packages for VPN
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - openconnect
+    - network-manager-openconnect
+    - network-manager-openconnect-gnome
+

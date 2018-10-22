@@ -1,6 +1,8 @@
 # AnsibleLaptop
 Use Ansible to put our machine setup and preferences into version control, making life easier if my laptop spontaneously combusts.
 
+**Continuing Question:** What is the best way to keep this repo up to date and make it simle to incrementally add pieces? Documentation is inherently stale as soon as it's written, so how can we approach this?
+
 ## Layout
 `roles/` holds a single level of all roles and `group-roles/` helps to gather similar ones together, such as `browsers`.  
 This ideally helps our playbooks to be easily-readable and we can change the inner workings of either `roles` or `group-roles` without affecting the playbooks.
@@ -8,14 +10,14 @@ This ideally helps our playbooks to be easily-readable and we can change the inn
 ## Usage
 - On a fresh installation of Ubuntu (also probably functional on any distro using `apt`), install git and your editor of choice and clone this repo
 - After cloning, running the provided Makefile options will allow you to either fully run the 
-playbook or dry-run or check the playbook syntax
+playbook, dry-run, test, or just check the playbook syntax.
 - That's it!
 
-### Windows Setup Guide
+### Windows Setup Guide (Indefinite hold since we never use Windows)
 Using Ansible seemed overkill for the small amount I use it, if my usage goes up significantly I will
 reinvigorate this section with automation.
 
-### Lost Phone Plan
+### Lost Phone Plan (In progress)
 A "script" I can run on my life if I ever lose my phone again.  Give myself concrete steps to follow
 and give myself the best chance at retrieval and damage minimization.  
 

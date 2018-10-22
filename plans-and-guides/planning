@@ -1,7 +1,0 @@
-playbooks should be the main configuration details, not roles like we currently have
-- Want to be able to run against any debian/ubuntu derivative, so need to write it in a way that is conducive
-- Should be able to choose to run against desktop or laptop with no issue
-- Should be able to setup raspberry pi or home server with everything we need
-- roles can be passed values (like commands), could be useful
-- handlers are used when other tasks report changes, such as restarting services
-

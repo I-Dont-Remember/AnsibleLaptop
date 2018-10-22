@@ -1,0 +1,72 @@
+---
+- name: Install Apt packages for dev stuff
+  apt: pkg={{ item }} state=latest
+  with_items:
+    # for fun
+    - sl
+    - cowsay
+    - figlet
+    # helpful tools
+    - wget
+    - curl
+    - httpie
+    - tmux
+    - autojump
+    - vim
+    - nmap
+    - ncdu
+    # utilities
+    - yakuake # best tool ever ever ever
+    - less
+    - zip
+    - tar
+    - rar
+    - unrar
+    - p7zip
+    - p7zip-full
+    - make
+    - tar
+    - screen
+    - gparted
+    # misc necessities
+    - build-essential
+    - apt-transport-https
+    - net-tools
+
+# TODO: find where `noti` binary is from
+# TODO: decide whether Vagrant is valuable in our workflow
+
+- include_role:
+    name: vs-code
+
+- include_role:
+    name: etcher
+
+- include_role:
+    name: docker
+
+- include_role:
+    name: python
+
+- include_role:
+    name: go
+
+- include_role:
+    name: node
+
+- include_role:
+    name: react-native
+
+- include_role:
+    name: arduino
+
+- include_role:
+    name: verilog
+
+- include_role:
+    name: C
+
+- include_role:
+    name: java
+
+

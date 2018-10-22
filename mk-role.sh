@@ -1,3 +1,4 @@
+# Save time when creating the basic role structure
 #! /bin/bash
 
 if [ $# -ne 1 ]; then
@@ -7,5 +8,5 @@ fi
 
 name=$1
 echo "Making $name role.."
-mkdir -p $name/tasks
-touch $name/tasks/main.yml
+mkdir -p ./roles/$name/tasks
+touch ./roles/$name/tasks/main.yml

@@ -6,3 +6,7 @@
 
 - include_role:
     name: chrome
+
+- include_role:
+    name: opera
+

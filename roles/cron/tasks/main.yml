@@ -1,0 +1,5 @@
+# TODO:  this might end up getting stored in dotfiles,
+# hard to tell right now.  Think about having a cron job
+# for backups (if Dropbox isn't working anymore), another
+# possiblilty is to daily commit any changes to dotfiles repo
+# so we always have most up to date version online.

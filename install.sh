@@ -23,5 +23,6 @@ if [ ! -d $download_dir ]; then
     mkdir $download_dir
 fi
 
+echo "[*] installing roles from Ansible Galaxy"
 # Install roles to directory specified in `ansible.cfg`
-ansible-galaxy -r requirements.yml
+ansible-galaxy install -r requirements.yml

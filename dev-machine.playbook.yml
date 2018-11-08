@@ -1,0 +1,9 @@
+- name: Dev Machine Setup
+  hosts: all
+  connection: local
+  become: yes
+  roles:
+      - group-roles/dev-things
+      - group-roles/misc
+      - group-roles/browsers
+      - group-roles/backups

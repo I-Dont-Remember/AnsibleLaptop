@@ -59,3 +59,42 @@ playbooks should be the main configuration details, not roles like we currently 
 - roles can be passed values (like commands), could be useful
 - handlers are used when other tasks report changes, such as restarting services
 
+
+For being able to handle multiple distros/ OS's from the same playbook:
+!!"For example, it is common practice to have platform-specific tasks included from the tasks/main.yml file"!
+https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
+"
+# roles/example/tasks/main.yml
+- name: added in 2.4, previously you used 'include'
+  import_tasks: redhat.yml
+  when: ansible_facts['os_family']|lower == 'redhat'
+- import_tasks: debian.yml
+  when: ansible_facts['os_family']|lower == 'debian'
+
+# roles/example/tasks/redhat.yml
+- yum:
+    name: "httpd"
+    state: present
+
+# roles/example/tasks/debian.yml
+- apt:
+    name: "apache2"
+    state: present
+
+"
+^^ this seems like the normal way to handle different distros while keeping the playbook the same
+
+# *************** IS IT WORTH IT?? ********************8
+Is Ansible worth the effort versus having a variety of bash scripts or 
+or things stored around? If we start spending more time working in Vim our dotfiles
+take up more and more of this project.  Spend some time thinking this through before
+spending lots of time on it.
+
+* We will probably be forced to use Macs for the foreseable future at work no matter what company,
+come up with our bootstrap version so we can get up and running real fast each time.
+https://github.com/mikemcquaid/strap
+https://news.ycombinator.com/item?id=13677023
+https://gist.github.com/talentdeficit/253fd1eaf25cb41e5c24a467f4c8f914
+https://github.com/carlosonunez/setup
+https://www.stavros.io/posts/provisioning-your-computer-one-command-awesome/
+https://www.jeffgeerling.com/blog/2018/how-i-test-ansible-configuration-on-7-different-oses-docker

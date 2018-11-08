@@ -1,4 +1,6 @@
----
 # TODO: setup pipenv/virtualenv/etc., the only few packages
 # that should exist globally if we can help it.  All
 # future should be within specific repos venv.
+
+# Use pipenv & pyenv or alternative for easy use of any python version,
+# annoying to move project between machine/people with different versions

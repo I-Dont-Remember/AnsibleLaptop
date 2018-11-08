@@ -1,0 +1,6 @@
+- name: Dev Machine Setup
+  hosts: all
+  connection: local
+  become: yes
+  roles:
+      - &&&

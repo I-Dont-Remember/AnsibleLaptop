@@ -1,5 +1,8 @@
----
-- name: Install Golang apt packages
-  apt: pkg={{ item }} state=latest
-  with_items:
-      - golang-go
+# - name: Install Golang apt packages
+#   apt: pkg={{ item }} state=latest
+#   with_items:
+#       - golang-go
+
+# https://galaxy.ansible.com/fubarhouse/golang
+- include_role:
+  name: fubarhouse.golang

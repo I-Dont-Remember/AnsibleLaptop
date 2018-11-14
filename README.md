@@ -41,13 +41,14 @@ and give myself the best chance at retrieval and damage minimization.
 -   https://github.com/ksylvan/AnsibleLaptop
 -   https://github.com/iknite/ansible-spotify
 
-#### Testing
+#### Testing (Broken, but wasting too much time on it. This repo is supposed to be quick and dirty configuration saving, not long ardurous process)
 
 The Dockerfile is laid out to build a fresh image ready for testing. Build it and run `docker run image-name make install`
 to apply the Ansible playbook. In the future it is probably worth switching over to [provision_docker](https://github.com/chrismeyersfsu/provision_docker).
 Other testing strategies are being researched as well and will be added in the coming months.
 There is also a `make test` available for the image built by `make build`.
-To test a single role while developing it (Only set up for Ubuntu 18.04 testing currently), use `make test-local-role role=<role-name>`.
+To test a single role while developing it (Only set up for Ubuntu 18.04 testing currently), use `make test-local-role role=<role-name>`. If the role
+is from Galaxy, you currently have to `ansible-galaxy install -r requirements.yml` to pull those down locally for a little while.
 
 ###### Notes
 

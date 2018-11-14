@@ -1,0 +1,4 @@
+build_go_from_source: false
+go_version: 1.10
+GOPATH: /home/kevin/go/packages
+GOROOT: /home/kevin/go

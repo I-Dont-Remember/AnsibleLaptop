@@ -1,0 +1,3 @@
+nvm_version: HEAD
+nvm_node_version: 8.12.0
+nvm_install_path: ~/.nvm

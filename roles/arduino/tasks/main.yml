@@ -1,2 +1,4 @@
----
 # TODO: setup for Arduino development
+# https://galaxy.ansible.com/conorsch/arduino
+- include_role:
+  name: conorsch.arduino

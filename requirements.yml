@@ -1,2 +1,13 @@
 - src: iknite.spotify
+- src: gantsign.pyenv
+- src: gantsign.pipenv
+- src: cmprescott.chrome
+- src: gantsign.visual-studio-code
+- src: geerlingguy.docker
+- src: conorsch.arduino
+- src: thisdwhitley.ansible-role-brave
+- src: stephdevit.nvm
+- src: geerlingguy.java
+
+
 

@@ -1,11 +1,3 @@
-# This needs to be reworked to be less fragile
-- name: VS Code get file
-  get_url:
-      url: https://go.microsoft.com/fwlink/?LinkID=760868
-      dest: /home/{{ user_name }}/code_1.18.1-1510857349_amd64.deb
-
-- name: VS Code install
-  apt:
-      deb: /home/{{ user_name }}/code_1.18.1-1510857349_amd64.deb
-
-# TODO: Need to figure out how to track all of our VSCode settings in (probably) dotfiles repo
+# https://galaxy.ansible.com/gantsign/visual-studio-code
+- include_role:
+  name: gantsign.visual-studio-code

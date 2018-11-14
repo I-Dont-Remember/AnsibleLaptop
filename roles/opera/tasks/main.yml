@@ -1,2 +1,4 @@
----
-# TODO: setup install for Opera browser
+- name: Opera installation
+  apt:
+      name: opera-stable
+      state: present

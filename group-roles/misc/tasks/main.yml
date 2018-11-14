@@ -10,6 +10,7 @@
       - kdeconnect # occasionally useful for file transfer; etc. Should be swapped for QR file transfer repo.
       - gwenview
       - shellcheck # to make us not suck at Bash; in future look into https://github.com/mvdan/sh shell formatters
+      - grip # TODO: this might not be a package; it's the markdown viewer we found from Github
 
 - include_role:
       name: wisc-vpn

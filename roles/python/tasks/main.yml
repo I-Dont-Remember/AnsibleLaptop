@@ -4,3 +4,15 @@
 
 # Use pipenv & pyenv or alternative for easy use of any python version,
 # annoying to move project between machine/people with different versions
+
+# https://galaxy.ansible.com/gantsign/pyenv
+- include_role:
+      name: gantsign.pyenv
+
+# https://galaxy.ansible.com/gantsign/pipenv
+- include_role:
+      name: gantsign.pipenv
+# Need a way to have globally installed Python tools like AWS CLI,
+# and things like pipenv since it is installed by pip
+# ** Solution, have a set 3 version as global from pyenv, then can
+# do pip install of pipenv and other possible goodies

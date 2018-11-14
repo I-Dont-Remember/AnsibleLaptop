@@ -2,4 +2,4 @@
 
 . ./functions.sh
 
-&&& || error "failed to install this role."
+&&& || error "failed to install this function."

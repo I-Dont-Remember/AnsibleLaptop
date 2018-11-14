@@ -3,4 +3,4 @@
 . ./functions.sh
 
 # Run main
-main
+main || error "failed running full test."
